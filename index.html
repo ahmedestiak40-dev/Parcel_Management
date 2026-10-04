@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parcel Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📦 Parcel Management System</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Add New Parcel</h2>
+      <form id="parcelForm">
+        <input type="text" id="sender" placeholder="Sender Name" required />
+        <input type="text" id="receiver" placeholder="Receiver Name" required />
+        <input type="text" id="tracking" placeholder="Tracking Number" required />
+        <select id="status">
+          <option value="Pending">Pending</option>
+          <option value="In Transit">In Transit</option>
+          <option value="Delivered">Delivered</option>
+        </select>
+        <button type="submit">Add Parcel</button>
+      </form>
+    </section>
+
+    <section class="control-panel">
+      <input type="text" id="searchInput" placeholder="🔍 Search parcels..." />
+      <select id="filterStatus">
+        <option value="All">All</option>
+        <option value="Pending">Pending</option>
+        <option value="In Transit">In Transit</option>
+        <option value="Delivered">Delivered</option>
+      </select>
+      <button id="sortByDate">Sort by Date</button>
+      <button id="exportCSV">Export CSV</button>
+      <button id="clearAll">Clear All</button>
+    </section>
+
+    <section class="list-section">
+      <h2>📋 Parcel Dashboard</h2>
+      <table id="parcelTable">
+        <thead>
+          <tr>
+            <th>Sender</th>
+            <th>Receiver</th>
+            <th>Tracking #</th>
+            <th>Status</th>
+            <th>Date Added</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 💙 by Alex | Powered by LocalStorage</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
